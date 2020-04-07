@@ -1,1 +1,114 @@
-hahha
+Microsoft Windows [Version 10.0.18362.720]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+F:\New folder>cd
+F:\New folder
+
+F:\New folder>git config
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --default <value>     with --get, use default value when missing entry
+
+
+F:\New folder>git config --global user.email "franklinc1301@gmail.com"
+
+F:\New folder>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   git.txt.txt
+
+
+F:\New folder>git push -u origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/franklin1301/naveengit.git'
+
+F:\New folder>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   git.txt.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    git.txt.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git.txt
+
+
+F:\New folder>git add .
+
+F:\New folder>git remote add origin https://github.com/franklin1301/naveengit.git
+fatal: remote origin already exists.
+
+F:\New folder>git push -u origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/franklin1301/naveengit.git'
+
+F:\New folder>git commit -m "added"
+[master (root-commit) d796f99] added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 git.txt
+
+F:\New folder>git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 209 bytes | 69.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/franklin1301/naveengit.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+F:\New folder>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+F:\New folder>
